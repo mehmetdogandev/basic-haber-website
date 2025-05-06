@@ -226,6 +226,6 @@ Bu proje [MIT Lisansı](LICENSE) altında lisanslanmıştır.
 
 ## İletişim
 
-Proje Sahibi: [İsim Soyisim]
-GitHub: [GitHub Profil Linki]
-E-posta: ornek@email.com
+Proje Sahibi: Mehmet DOĞAN
+GitHub: https://github.com/mehmetdogandev
+E-posta: mehmetdogan.dev@gmail.com
