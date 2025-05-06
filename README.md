@@ -6,61 +6,226 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
+# Laravel Haber Sitesi Projesi
 
-## About Laravel
+![Ana Sayfa](https://via.placeholder.com/800x400?text=Haber+Sitesi+Ana+Sayfa)
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+## Proje Hakkında
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+Bu proje, Laravel kullanılarak geliştirilmiş basit bir haber sitesidir. Farklı kategorilerde (Gündem, Spor, Ekonomi, Teknoloji, Kültür ve Sanat vb.) haberler sunmayı amaçlamaktadır. Şu an için temel HTML ve CSS yapıları kullanılarak oluşturulmuş statik sayfalardan oluşmaktadır.
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+## Ekran Görüntüleri
 
-## Learning Laravel
+### Ana Sayfa
+![Ana Sayfa](https://via.placeholder.com/600x300?text=Ana+Sayfa)
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+### Gündem Haberleri
+![Gündem](https://via.placeholder.com/600x300?text=Gundem+Haberleri)
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+### Ekonomi Haberleri
+![Ekonomi](https://via.placeholder.com/600x300?text=Ekonomi+Haberleri)
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+## Özellikler
 
-## Laravel Sponsors
+- Duyarlı (responsive) tasarım
+- Farklı haber kategorileri
+- Modern ve kullanıcı dostu arayüz
+- Kategori ve alt kategori yapısı
+- Öne çıkan haberler bölümü
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+## Teknolojiler
 
-### Premium Partners
+- **Laravel 10**: PHP tabanlı web uygulama framework'ü
+- **PHP 8.2**: Backend programlama dili
+- **HTML5/CSS3**: Frontend yapısı
+- **Blade**: Laravel'in template motoru
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[WebReinvent](https://webreinvent.com/)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Jump24](https://jump24.co.uk)**
-- **[Redberry](https://redberry.international/laravel/)**
-- **[Active Logic](https://activelogic.com)**
-- **[byte5](https://byte5.de)**
-- **[OP.GG](https://op.gg)**
+## Kurulum
 
-## Contributing
+### Gereksinimler
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+- PHP >= 8.1
+- Composer
+- Node.js & NPM
+- Laravel 10.x
 
-## Code of Conduct
+### Adımlar
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+1. Repo'yu klonlayın:
+   ```bash
+   git clone https://github.com/KULLANICI_ADI/laravel-haber-sitesi.git
+   cd laravel-haber-sitesi
+   ```
 
-## Security Vulnerabilities
+2. Bağımlılıkları yükleyin:
+   ```bash
+   composer install
+   npm install
+   ```
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+3. `.env` dosyasını oluşturun:
+   ```bash
+   cp .env.example .env
+   php artisan key:generate
+   ```
 
-## License
+4. Uygulamayı çalıştırın:
+   ```bash
+   php artisan serve
+   ```
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+5. Tarayıcınızdan `http://localhost:8000` adresine gidin.
+
+## Proje Yapısı
+
+### View Dosyaları
+- `index.php` - Ana sayfa
+- `gundem.php` - Gündem haberleri
+- `spor.php` - Spor haberleri
+- `eko.php` - Ekonomi haberleri
+- `tekno.php` - Teknoloji haberleri
+- `kultur.php` - Kültür ve sanat haberleri
+- `yapayzeka.php` - Yapay zeka haberleri
+- `metaverse.php` - Metaverse haberleri
+- `sergi.php` - Sergiler haberleri
+- `tytro.php` - Tiyatro gösterimleri
+- `konserhbr.php` - Konserler haberleri
+
+### Ortak Bileşenler
+- `header.php` - Tüm sayfalarda kullanılan üst bölüm (navigasyon menüsü)
+- `footer.php` - Tüm sayfalarda kullanılan alt bölüm
+
+### Rota Yapısı
+
+```php
+<?php
+
+use Illuminate\Support\Facades\Route;
+
+Route::get('/', function () {
+    return view('index');
+});
+Route::get('/anasayfa', function () {
+    return view('index');
+});
+
+Route::get('/gündem-haberleri', function () {
+    return view('gundem');
+});
+
+Route::get('/spor-haberleri', function () {
+    return view('spor');
+});
+
+Route::get('/ekonomi-haberleri', function () {
+    return view('eko');
+});
+
+Route::get('/teknoloji-haberleri', function () {
+    return view('tekno');
+});
+Route::get('/kultur-haberleri', function () {
+    return view('kultur');
+});
+
+Route::get('/yapay-zeka-haberleri', function () {
+    return view('yapayzeka');
+});
+
+Route::get('/metaverse-haberleri', function () {
+    return view('metaverse');
+});
+
+Route::get('/sergiler-haberleri', function () {
+    return view('sergi');
+});
+
+Route::get('/tiyatro-gosterimleri-haberleri', function () {
+    return view('tytro');
+});
+
+Route::get('/konserler-haberleri', function () {
+    return view('konserhbr');
+});
+```
+
+## Sayfalar ve İçerikleri
+
+### Ana Sayfa
+Ana sayfa, öne çıkan haberlerle birlikte temel kategorilere ait haberleri gösterir. Hero bölümünde önemli bir başlık yer alır.
+
+### Kategori Sayfaları
+Her kategori sayfası, ilgili alana ait haberleri gösterir ve genellikle:
+- Kategori başlığı
+- Öne çıkan haber (hero section)
+- Haber kartları
+- İlgili alt kategorilere linkler
+
+şeklinde yapılandırılmıştır.
+
+## Navigasyon Yapısı
+
+Site navigasyonu, `header.php` dosyasında tanımlanan bir menü çubuğu üzerinden sağlanır. Ana kategoriler ve bazı alt kategoriler için dropdown menüler içerir.
+
+```
+- Ana Sayfa
+- Gündem
+- Spor
+- Ekonomi
+- Teknoloji
+  |- Yapay Zeka
+  |- Metaverse
+- Kültür & Sanat
+  |- Sergiler
+  |- Tiyatro Gösterimleri
+  |- Konserler
+```
+
+## Tasarım Elementleri
+
+- **Renk Şeması**: Her kategori sayfası kendi rengine sahiptir
+  - Gündem: #1a1a2e
+  - Ekonomi: #1a8a34
+  - Spor: #007bff
+  - Teknoloji: #0044cc
+  - Kültür & Sanat: #e64a19
+  - Yapay Zeka: #2c3e50
+  - Metaverse: #8e44ad
+  - Tiyatro: #2c3e50
+  - Sergiler: #2c3e50
+  - Konserler: #34495e
+
+- **Kart Yapısı**: Tüm haberlerin kart tasarımı benzer şekilde yapılandırılmıştır:
+  - Görsel
+  - Başlık
+  - Kısa açıklama
+  - "Devamını Oku" linki
+
+## Gelecek Geliştirmeler
+
+- Veritabanı entegrasyonu
+- Admin paneli
+- Kullanıcı kimlik doğrulama ve yetkilendirme
+- Dinamik içerik yönetimi
+- Yorum sistemi
+- Arama fonksiyonu
+- SEO optimizasyonu
+- Sosyal medya entegrasyonu
+
+## Katkıda Bulunma
+
+1. Projeyi fork edin
+2. Feature branch oluşturun (`git checkout -b feature/amazing-feature`)
+3. Değişikliklerinizi commit edin (`git commit -m 'Harika özellik eklendi'`)
+4. Branch'inizi push edin (`git push origin feature/amazing-feature`)
+5. Pull Request açın
+
+## Lisans
+
+Bu proje [MIT Lisansı](LICENSE) altında lisanslanmıştır.
+
+## İletişim
+
+Proje Sahibi: [İsim Soyisim]
+GitHub: [GitHub Profil Linki]
+E-posta: ornek@email.com
